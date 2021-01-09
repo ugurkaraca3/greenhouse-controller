@@ -1,4 +1,4 @@
-var dps = [];
+﻿var dps = [];
 var charts = [];
 var gh_labels = [];
 var tempIndex = [];
@@ -52,11 +52,7 @@ const update = (id,temp) => {
         graph_div.className = "graph";
         big_div.appendChild(graph_div);
 
-        charts[id] = new CanvasJS.Chart(id, {
-            title :{text: ""},
-            data: [{type: "line",dataPoints: dps[id]}]
-        });
-
+       
     }
     else
     {
@@ -68,7 +64,7 @@ const update = (id,temp) => {
     } 
 
     gh_labels[id].innerHTML = 'ID: ' + id+ ' <span>' + temp + " °C</span>";
-    charts[id].render();
+    
 };
 
 
